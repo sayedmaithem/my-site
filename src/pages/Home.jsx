@@ -4,6 +4,9 @@ import { MessageCircle, ChevronDown, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GOLD, GOLD_DIM, LOGO_SRC } from "../constants";
 
+// Home page component - Main landing page of Al-Mousawi Clinics
+// Features hero section, services preview, and call-to-action buttons
+
 function Reveal({ children, delay = 0, y = 40, className = "" }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
