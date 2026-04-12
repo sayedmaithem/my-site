@@ -107,14 +107,22 @@ export default function Navbar() {
           whileHover={{ scale: 1.04, boxShadow: "0 8px 30px rgba(212,175,55,0.25)" }}
           whileTap={{ scale: 0.97 }}
           style={{
-            display: "flex", alignItems: "center", gap: 7,
+            display: window.innerWidth < 768 ? "none" : "flex",
+            alignItems: "center", gap: 7,
             background: GOLD, color: "#050505",
-            padding: "0.55rem 1.3rem", borderRadius: 100,
-            fontSize: 13, fontWeight: 700, textDecoration: "none",
+            padding: window.innerWidth < 768 ? "0.5rem 0.8rem" : "0.55rem 1.3rem",
+            borderRadius: 100,
+            fontSize: window.innerWidth < 768 ? 12 : 13,
+            fontWeight: 700,
+            textDecoration: "none",
             fontFamily: "'Alexandria', sans-serif",
+            whiteSpace: "nowrap",
+            border: "none",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
           }}
         >
-          <MessageCircle size={14} /> احجز الآن
+          <MessageCircle size={window.innerWidth < 768 ? 12 : 14} /> احجز الآن
         </motion.a>
 
         {/* Hamburger */}
