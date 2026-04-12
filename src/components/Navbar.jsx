@@ -43,12 +43,14 @@ export default function Navbar() {
         style={{
           position: "fixed", top: 0, left: 0, right: 0, zIndex: 200,
           display: "flex", alignItems: "center", justifyContent: "space-between",
-          padding: scrolled ? "0.9rem 4rem" : "1.5rem 4rem",
+          padding: scrolled ? "0.8rem clamp(1rem, 4%, 4rem)" : "1.2rem clamp(1rem, 4%, 4rem)",
           background: scrolled ? "rgba(5,5,5,0.96)" : "transparent",
           backdropFilter: scrolled ? "blur(24px)" : "none",
           borderBottom: scrolled ? "1px solid rgba(255,255,255,0.04)" : "none",
           transition: "all 0.5s ease",
           fontFamily: "'Alexandria', sans-serif",
+          flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
+          width: "100%",
         }}
         className="nav-pad"
       >

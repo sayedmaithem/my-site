@@ -38,7 +38,12 @@ export default function Footer() {
     >
       <div
         className="footer-grid"
-        style={{ display: "grid", marginBottom: "4rem", gridTemplateColumns: "2fr 1fr 1fr", gap: "4rem" }}
+        style={{
+          display: "grid",
+          marginBottom: "4rem",
+          gridTemplateColumns: window.innerWidth < 768 ? "1fr" : "2fr 1fr 1fr",
+          gap: window.innerWidth < 768 ? "2rem" : "4rem"
+        }}
       >
         {/* Brand */}
         <Reveal>

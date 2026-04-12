@@ -1,0 +1,213 @@
+/* Global Responsive Styles */
+
+:root {
+  --mobile-padding: 1rem;
+  --tablet-padding: 1.5rem;
+  --desktop-padding: 4rem;
+}
+
+/* Mobile First Approach */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Navbar */
+  nav {
+    padding: 0.8rem var(--mobile-padding) !important;
+  }
+
+  .nav-links-desktop {
+    display: none !important;
+  }
+
+  .nav-hamburger {
+    display: flex !important;
+  }
+
+  /* Text sizes */
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.4rem !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+  }
+
+  p {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Spacing */
+  section {
+    padding: 1.5rem var(--mobile-padding) !important;
+  }
+
+  .container {
+    padding: var(--mobile-padding) !important;
+  }
+
+  /* Grid layouts */
+  .grid,
+  .services-grid,
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Cards */
+  .card {
+    padding: 1rem !important;
+  }
+
+  /* Forms and inputs */
+  input,
+  textarea,
+  button {
+    width: 100% !important;
+    padding: 0.75rem !important;
+    font-size: 1rem !important;
+  }
+
+  /* Table scroll */
+  table {
+    font-size: 0.85rem !important;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Logo size */
+  .logo {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  nav {
+    padding: 1rem var(--tablet-padding) !important;
+  }
+
+  .nav-links-desktop {
+    gap: 0.5rem !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  section {
+    padding: 2rem var(--tablet-padding) !important;
+  }
+
+  .grid,
+  .services-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.2rem !important;
+  }
+
+  .logo {
+    width: 34px !important;
+    height: 34px !important;
+  }
+}
+
+/* Small Desktop */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    padding: 1.2rem 2rem !important;
+  }
+
+  .grid,
+  .services-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  section {
+    padding: 2.5rem 2rem !important;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1025px) {
+  nav {
+    padding: 1.5rem var(--desktop-padding) !important;
+  }
+
+  .grid,
+  .services-grid,
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  section {
+    padding: 3rem var(--desktop-padding) !important;
+  }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  .interactive-element {
+    padding: 0.75rem !important;
+  }
+}
+
+/* Landscape */
+@media (orientation: landscape) and (max-height: 600px) {
+  nav {
+    padding: 0.5rem var(--mobile-padding) !important;
+  }
+
+  section {
+    padding: 1rem var(--mobile-padding) !important;
+  }
+
+  h1 {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* Print */
+@media print {
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
