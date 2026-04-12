@@ -72,7 +72,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.65rem", textDecoration: "none" }}>
           <motion.div whileHover={{ scale: 1.06 }} transition={{ duration: 0.25 }}>
-            <img src={LOGO_SRC} alt="logo" style={{ width: 36, height: 36, objectFit: "contain" }} />
+            <img src={LOGO_SRC} alt="logo" style={{ width: 50, height: 50, objectFit: "contain" }} />
           </motion.div>
           <span style={{ fontWeight: 500, fontSize: 15, color: "#fff", letterSpacing: "0.02em" }}>
             عيادات الموسوي

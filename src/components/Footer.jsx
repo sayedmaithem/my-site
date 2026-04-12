@@ -48,7 +48,7 @@ export default function Footer() {
         {/* Brand */}
         <Reveal>
           <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.7rem", marginBottom: "1.5rem", textDecoration: "none" }}>
-            <img src={LOGO_SRC} alt="logo" style={{ width: 40, height: 40, objectFit: "contain" }} />
+            <img src={LOGO_SRC} alt="logo" style={{ width: 54, height: 54, objectFit: "contain" }} />
             <span style={{ fontWeight: 500, fontSize: 16, color: "#fff" }}>عيادات الموسوي</span>
           </Link>
           <p style={{ fontWeight: 300, fontSize: 14, color: "#4B5563", lineHeight: 1.9, maxWidth: 320 }}>
