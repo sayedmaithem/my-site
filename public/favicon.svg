@@ -1,20 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
-  <!-- Favicon - Professional dental clinic logo in gold -->
-
-  <!-- Background circle for favicon compatibility -->
-  <circle cx="100" cy="100" r="100" fill="#050505"/>
-
-  <!-- Outer ring -->
-  <circle cx="100" cy="100" r="95" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.4"/>
-
-  <!-- Main tooth shape -->
-  <path d="M 100 35 C 112 35 120 42 120 58 L 120 85 C 120 98 112 108 100 112 C 88 108 80 98 80 85 L 80 58 C 80 42 88 35 100 35 Z" fill="#D4AF37" stroke="#D4AF37" stroke-width="1"/>
-
-  <!-- Shine/highlight on tooth -->
-  <path d="M 87 55 Q 96 50 105 55" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- Root accent -->
-  <line x1="98" y1="112" x2="98" y2="125" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-  <line x1="100" y1="112" x2="100" y2="128" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
-  <line x1="102" y1="112" x2="102" y2="125" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 560" width="64" height="64" fill="none">
+  <rect width="520" height="560" rx="80" fill="#050505"/>
+  <!-- Top M-shape -->
+  <path d="M 115 278 C 103 205 118 148 165 122 C 202 102 235 140 258 168 C 278 142 318 105 368 126 C 425 150 440 212 418 278"
+    stroke="#D4AF37" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- First horizontal line -->
+  <path d="M 80 313 C 182 296 335 296 448 313"
+    stroke="#D4AF37" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <!-- Second horizontal line -->
+  <path d="M 72 356 C 178 338 322 338 438 356"
+    stroke="#D4AF37" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <!-- C-curve root -->
+  <path d="M 100 392 C 55 448 58 506 108 528 C 168 554 252 540 295 507 C 322 488 328 462 312 440"
+    stroke="#D4AF37" stroke-width="26" stroke-linecap="round" fill="none"/>
 </svg>

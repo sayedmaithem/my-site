@@ -2,7 +2,7 @@ export const GOLD = "#D4AF37";
 export const GOLD_DIM = "#B8860B";
 export const BG = "#050505";
 
-export const LOGO_SRC = "/logo-white.svg"; // White logo for navbar and footer
+export const LOGO_SRC = "/logo.svg"; // Gold clinic logo for navbar and footer
 export const LOGO_GOLD = "/logo.svg"; // Gold logo for alternative use
 
 // OLD LOGO (commented out) - was:
