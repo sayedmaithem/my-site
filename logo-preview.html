@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Logo Preview - عيادات الموسوي</title>
+  <style>
+    body {
+      background: #050505;
+      margin: 0;
+      padding: 40px;
+      font-family: 'Alexandria', sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      min-height: 100vh;
+    }
+
+    .preview-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 30px;
+      background: rgba(212, 175, 55, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 12px;
+      max-width: 600px;
+    }
+
+    h2 {
+      color: #D4AF37;
+      margin: 0 0 20px 0;
+      font-size: 24px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background: #0a0a0a;
+      border-radius: 8px;
+    }
+
+    .logo-container img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .navbar-preview {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 20px;
+      background: rgba(5, 5, 5, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+    }
+
+    .navbar-preview img {
+      width: 36px;
+      height: 36px;
+    }
+
+    .navbar-preview span {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .footer-preview {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      background: rgba(212, 175, 55, 0.08);
+      border-radius: 8px;
+    }
+
+    .footer-preview img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .text {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+      body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-section">
+    <h2>🦷 Gold Logo (New Design)</h2>
+    <div class="logo-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+        <circle cx="100" cy="100" r="95" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.3"/>
+        <path d="M 100 25 C 115 25 125 35 125 55 L 125 90 C 125 105 115 115 100 120 C 85 115 75 105 75 90 L 75 55 C 75 35 85 25 100 25 Z" fill="#D4AF37" stroke="#D4AF37" stroke-width="1.5"/>
+        <path d="M 85 50 Q 95 45 105 50" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="95" y1="120" x2="95" y2="135" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <line x1="100" y1="120" x2="100" y2="138" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="105" y1="120" x2="105" y2="135" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <ellipse cx="100" cy="125" rx="22" ry="6" fill="#D4AF37" opacity="0.15"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="preview-section">
+    <h2>📱 In Navbar (Desktop)</h2>
+    <div class="navbar-preview">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="36" height="36" fill="none">
+        <circle cx="100" cy="100" r="95" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.3"/>
+        <path d="M 100 25 C 115 25 125 35 125 55 L 125 90 C 125 105 115 115 100 120 C 85 115 75 105 75 90 L 75 55 C 75 35 85 25 100 25 Z" fill="#D4AF37" stroke="#D4AF37" stroke-width="1.5"/>
+        <path d="M 85 50 Q 95 45 105 50" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="95" y1="120" x2="95" y2="135" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <line x1="100" y1="120" x2="100" y2="138" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="105" y1="120" x2="105" y2="135" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+      <span>عيادات الموسوي</span>
+    </div>
+    <div class="text">مظهر احترافي في شريط التنقل - واضح وجميل على خلفية سوداء</div>
+  </div>
+
+  <div class="preview-section">
+    <h2>👣 In Footer</h2>
+    <div class="footer-preview">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="50" height="50" fill="none">
+        <circle cx="100" cy="100" r="95" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.3"/>
+        <path d="M 100 25 C 115 25 125 35 125 55 L 125 90 C 125 105 115 115 100 120 C 85 115 75 105 75 90 L 75 55 C 75 35 85 25 100 25 Z" fill="#D4AF37" stroke="#D4AF37" stroke-width="1.5"/>
+        <path d="M 85 50 Q 95 45 105 50" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="95" y1="120" x2="95" y2="135" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <line x1="100" y1="120" x2="100" y2="138" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="105" y1="120" x2="105" y2="135" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+      <div>
+        <strong style="color: #D4AF37;">عيادات الموسوي</strong>
+        <div class="text">متخصصون في طب الأسنان المتقدم بالمجهر الجراحي</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-section">
+    <h2>✨ Why This Logo Works</h2>
+    <div class="text">
+      <ul style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+        <li>✓ ذهبي احترافي (#D4AF37) - يتناسب مع العيادة الفاخرة</li>
+        <li>✓ واضح جداً على خلفية سوداء (عكس الأبيض)</li>
+        <li>✓ تصميم سني مميز - يدل على التخصص الطبي</li>
+        <li>✓ يعمل في جميع الأحجام (navbar, footer, favicon)</li>
+        <li>✓ لون ذهبي يعكس الجودة والاحترافية</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="preview-section">
+    <h2>🎨 Performance Improvements (Mobile)</h2>
+    <div class="text">
+      <ul style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+        <li>✓ حل مشكلة الـ Lag عند التمرير - استخدام requestAnimationFrame</li>
+        <li>✓ تحسين أداء الـ Menu Animation - تقليل التأثيرات</li>
+        <li>✓ إضافة willChange CSS - تحسين الأداء</li>
+        <li>✓ تقليل مدة الـ Animation - بقاء الحركة سلسة</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

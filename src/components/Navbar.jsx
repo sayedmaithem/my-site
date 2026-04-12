@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
@@ -16,12 +16,24 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const scrollTimeoutRef = useRef(null);
 
+  // Optimized scroll handler with debouncing
   useEffect(() => {
+    let ticking = false;
+
     const fn = () => {
-      setScrolled(window.scrollY > 50);
-      if (window.scrollY > 50) setMenuOpen(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 50;
+          setScrolled(isScrolled);
+          if (isScrolled) setMenuOpen(false);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
   }, []);
@@ -33,6 +45,9 @@ export default function Navbar() {
   }, [location.pathname]);
 
   const isActive = (path) => location.pathname === path;
+  const toggleMenu = useCallback(() => {
+    setMenuOpen((prev) => !prev);
+  }, []);
 
   return (
     <>
@@ -128,7 +143,7 @@ export default function Navbar() {
         {/* Hamburger */}
         <button
           className="hamburger-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={toggleMenu}
           aria-label="القائمة"
           style={{
             background: "rgba(255,255,255,0.05)",
@@ -138,35 +153,38 @@ export default function Navbar() {
             display: "flex", flexDirection: "column",
             justifyContent: "center", alignItems: "center",
             gap: 5, cursor: "pointer",
+            willChange: "transform",
           }}
         >
           {[0, 1, 2].map((i) => (
             <motion.span
               key={i}
               animate={menuOpen ? (i === 1 ? { opacity: 0 } : i === 0 ? { rotate: 45, y: 8 } : { rotate: -45, y: -8 }) : { rotate: 0, y: 0, opacity: 1 }}
-              transition={{ duration: 0.25 }}
-              style={{ display: "block", width: 18, height: 1.5, background: "#fff", borderRadius: 2 }}
+              transition={{ duration: 0.2 }}
+              style={{ display: "block", width: 18, height: 1.5, background: "#fff", borderRadius: 2, willChange: "transform" }}
             />
           ))}
         </button>
       </motion.nav>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
+      {/* Mobile Menu - Optimized */}
+      <AnimatePresence mode="wait">
         {menuOpen && (
           <>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               className="mobile-menu-overlay"
               onClick={() => setMenuOpen(false)}
+              style={{ willChange: "opacity" }}
             />
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.25 }}
               className="mobile-menu"
               style={{
                 position: "fixed", top: 0, left: 0, right: 0, zIndex: 195,
@@ -174,6 +192,8 @@ export default function Navbar() {
                 backdropFilter: "blur(32px)",
                 borderBottom: "1px solid rgba(212,175,55,0.12)",
                 padding: "5.5rem 2rem 2.5rem",
+                willChange: "transform, opacity",
+                backfaceVisibility: "hidden",
               }}
             >
               {NAV_LINKS.map((link, i) => (
@@ -181,7 +201,8 @@ export default function Navbar() {
                   key={link.to}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.07 }}
+                  transition={{ delay: i * 0.05, duration: 0.2 }}
+                  style={{ willChange: "transform, opacity" }}
                 >
                   <Link
                     to={link.to}
@@ -195,6 +216,7 @@ export default function Navbar() {
                       padding: "0.9rem 0",
                       borderBottom: "1px solid rgba(255,255,255,0.04)",
                       fontFamily: "'Alexandria', sans-serif",
+                      transition: "color 0.2s ease",
                     }}
                   >
                     {link.label}
@@ -207,7 +229,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.3, duration: 0.2 }}
                 style={{
                   display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                   background: GOLD, color: "#050505",
@@ -215,6 +237,7 @@ export default function Navbar() {
                   fontSize: 15, fontWeight: 700, textDecoration: "none",
                   marginTop: "1.5rem",
                   fontFamily: "'Alexandria', sans-serif",
+                  willChange: "transform, opacity",
                 }}
               >
                 <MessageCircle size={16} /> احجز عبر واتساب

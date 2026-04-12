@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <!-- Favicon - Professional dental clinic logo in gold -->
+
+  <!-- Background circle for favicon compatibility -->
+  <circle cx="100" cy="100" r="100" fill="#050505"/>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="95" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.4"/>
+
+  <!-- Main tooth shape -->
+  <path d="M 100 35 C 112 35 120 42 120 58 L 120 85 C 120 98 112 108 100 112 C 88 108 80 98 80 85 L 80 58 C 80 42 88 35 100 35 Z" fill="#D4AF37" stroke="#D4AF37" stroke-width="1"/>
+
+  <!-- Shine/highlight on tooth -->
+  <path d="M 87 55 Q 96 50 105 55" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Root accent -->
+  <line x1="98" y1="112" x2="98" y2="125" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="100" y1="112" x2="100" y2="128" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+  <line x1="102" y1="112" x2="102" y2="125" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+</svg>
