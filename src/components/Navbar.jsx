@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
@@ -16,7 +16,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const scrollTimeoutRef = useRef(null);
 
   // Optimized scroll handler with debouncing
   useEffect(() => {
@@ -40,7 +39,6 @@ export default function Navbar() {
 
   // Close menu on route change
   useEffect(() => {
-    setMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location.pathname]);
 

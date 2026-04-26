@@ -1,6 +1,11 @@
 import https from 'https';
 
-const TOKEN = 'nfp_yLuCseWw4diS9a679TKqDE69iEbkGYzJba14';
+const TOKEN = process.env.NETLIFY_TOKEN;
+
+if (!TOKEN) {
+  console.error('Missing NETLIFY_TOKEN environment variable.');
+  process.exit(1);
+}
 
 // Get site info
 const options = {

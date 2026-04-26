@@ -1,9 +1,11 @@
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
+import https from 'https';
 
-const TOKEN = 'nfp_yLuCseWw4diS9a679TKqDE69iEbkGYzJba14';
-const SITE_ID = ''; // We'll get this first
+const TOKEN = process.env.NETLIFY_TOKEN;
+
+if (!TOKEN) {
+  console.error('Missing NETLIFY_TOKEN environment variable.');
+  process.exit(1);
+}
 
 // First, get the site info
 const options = {
@@ -30,7 +32,7 @@ const req = https.request(options, (res) => {
         console.log('Sites found:');
         sites.forEach(s => console.log(`  - ${s.name}: ${s.id}`));
       }
-    } catch (e) {
+    } catch (_e) {
       console.log('Response:', data);
     }
   });

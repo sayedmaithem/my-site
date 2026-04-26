@@ -30,3 +30,10 @@ export const CONTACT = {
   address: "كربلاء، حي التعاون، مقابل فلكة النافورة",
   hours: "١١ صباحاً — ١٠ مساءً يومياً",
 };
+
+export const VIDEO_PAGE = {
+  videoSrc: "/clinic-update.mp4",
+  webhookUrl: "PUT_N8N_WEBHOOK_HERE",
+  whatsappNumber: "9647XXXXXXXXX",
+  whatsappMessage: "السلام عليكم، شفت فيديو تحديث العيادة وأريد أحجز موعد",
+};
