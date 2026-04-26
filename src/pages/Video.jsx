@@ -12,7 +12,7 @@ function buildWhatsAppUrl() {
 export default function Video() {
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (!VIDEO_PAGE.webhookUrl || VIDEO_PAGE.webhookUrl === "PUT_N8N_WEBHOOK_HERE") return;
+    if (!VIDEO_PAGE.webhookUrl || VIDEO_PAGE.webhookUrl === "https://n8n.srv1125962.hstgr.cloud/webhook/video-open") return;
 
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name") || "";
