@@ -19,7 +19,7 @@ function Reveal({ children, delay = 0 }) {
 const NAV_LINKS = [
   { label: "الرئيسية", to: "/" },
   { label: "الخدمات", to: "/services" },
-  { label: "المقالات", to: "/articles" },
+  { label: "المقالات", to: "/article" },
   { label: "عن العيادة", to: "/about" },
   { label: "تواصل معنا", to: "/contact" },
   { label: "الاستراحة", to: "/lounge" },
