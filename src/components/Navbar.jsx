@@ -7,6 +7,7 @@ import { GOLD, LOGO_SRC } from "../constants";
 const NAV_LINKS = [
   { label: "الرئيسية", to: "/" },
   { label: "الخدمات", to: "/services" },
+  { label: "المقالات", to: "/articles" },
   { label: "عن العيادة", to: "/about" },
   { label: "تواصل معنا", to: "/contact" },
   { label: "الاستراحة", to: "/lounge" },

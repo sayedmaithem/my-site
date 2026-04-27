@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Lounge from "./pages/Lounge";
 import Video from "./pages/Video";
+import Articles from "./pages/Articles";
 
 // Pages that should NOT show the shared Footer
 const NO_FOOTER = ["/lounge"];
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
           <Route path="/lounge" element={<PageWrapper><Lounge /></PageWrapper>} />
           <Route path="/video" element={<PageWrapper><Video /></PageWrapper>} />
+          <Route path="/articles" element={<PageWrapper><Articles /></PageWrapper>} />
           {/* 404 fallback */}
           <Route path="*" element={
             <PageWrapper>
